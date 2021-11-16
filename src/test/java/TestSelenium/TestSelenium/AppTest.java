@@ -16,16 +16,16 @@ public class AppTest
 	@Test             
 	public void sample() {   
 		
-//	System.setProperty("webdriver.chrome.driver", driverPath);  
-//	
-//	driver = new ChromeDriver();
-//	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);  
-//	driver.manage().window().maximize();  
-//	driver.get(baseUrl);  
-//	String URL= driver.getCurrentUrl();  
-//	System.out.print(URL);  
-//	String title = driver.getTitle();                  
-//	System.out.println(title);  
+	System.setProperty("webdriver.chrome.driver", driverPath);  
+	
+	driver = new ChromeDriver();
+	 
+	driver.manage().window().maximize();  
+	driver.get(baseUrl);  
+	String URL= driver.getCurrentUrl();  
+	System.out.print(URL);  
+	String title = driver.getTitle();                  
+	System.out.println(title);  
 	}     
 	@BeforeTest  
 	public void beforeTest() {    
@@ -33,7 +33,7 @@ public class AppTest
 	}     
 	@AfterTest  
 	public void afterTest() {  
-	//driver.quit();  
+	driver.quit();  
 	System.out.println("after test");  
 	}
 }
