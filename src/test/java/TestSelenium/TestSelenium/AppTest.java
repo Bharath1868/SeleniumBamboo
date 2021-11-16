@@ -8,7 +8,8 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class SampleSelenium {
+public class AppTest 
+{
 	public String baseUrl = "https://www.javatpoint.com/";  
 	String driverPath = "resources\\chromedriver.exe";  
 	public WebDriver driver ;   
@@ -35,5 +36,5 @@ public class SampleSelenium {
 	driver.quit();  
 	System.out.println("after test");  
 	}
-
 }
+
