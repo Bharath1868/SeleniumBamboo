@@ -21,7 +21,7 @@ public class AppTest
 	 
 	driver.manage().window().maximize();  
 	driver.get(baseUrl);  
-	driver.findElement(By.xpath("//button[text()='AUTH']")).click();
+	//driver.findElement(By.xpath("//button[text()='AUTH']")).click();
 	//driver.findElement(By.name("com.siemens.dxa.applications.web.authn.challenging.username")).sendKeys("A123456");
 	//driver.findElement(By.name("com.siemens.dxa.applications.web.authn.challenging.response")).sendKeys("abcde");
 	//driver.findElement(By.name("com.siemens.dxa.applications.web.authn.challenging.response2")).sendKeys("123456");
