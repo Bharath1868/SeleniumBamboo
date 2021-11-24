@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class AppTest 
 {
-	public String baseUrl = "https://www.javatpoint.com/";  
+	public String baseUrl = "https://wac.das.myatos.net/portal/pki.jsp";  
 	String driverPath = "resources\\chromedriver.exe";  
 	public WebDriver driver ;   
 	@Test             
@@ -21,10 +21,10 @@ public class AppTest
 	 
 	driver.manage().window().maximize();  
 	driver.get(baseUrl);  
-	String URL= driver.getCurrentUrl();  
-	System.out.print(URL);  
-	String title = driver.getTitle();                  
-	System.out.println(title);  
+	driver.findElement(By.xpath("//button[text()='AUTH']")).click();
+	driver.findElement(By.name("com.siemens.dxa.applications.web.authn.challenging.username")).sendKeys("A123456");
+	driver.findElement(By.name("com.siemens.dxa.applications.web.authn.challenging.response")).sendKeys("abcde");
+	driver.findElement(By.name("com.siemens.dxa.applications.web.authn.challenging.response2")).sendKeys("123456");
 	}     
 	@BeforeTest  
 	public void beforeTest() {    
@@ -35,5 +35,6 @@ public class AppTest
 	driver.quit();  
 	System.out.println("after test");  
 	}
+
 }
 
